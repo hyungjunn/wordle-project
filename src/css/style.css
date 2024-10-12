@@ -24,6 +24,7 @@ body {
 .info-bar {
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 
 .spiral {
@@ -62,4 +63,79 @@ body {
   /* display: flex;
   align-items: center;
   justify-content: center; */
+}
+
+.correct {
+  background-color: darkgreen;
+  color: white;
+}
+
+.close {
+  background-color: goldenrod;
+  color: white;
+}
+
+.wrong {
+  background-color: #888;
+  color: white;
+}
+
+.invalid {
+  animation: flash 1s;
+}
+
+/* flashes red border and then fades back to gray */
+@keyframes flash {
+  5% {
+    border-color: crimson;
+  }
+
+  100% {
+    border-color: #ccc;
+  }
+}
+
+.winner {
+  animation: rainbow 4s infinite linear;
+}
+
+/* winner animation */
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
 }
